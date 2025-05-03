@@ -1,60 +1,69 @@
 /* Base styles */
 body {
-    font-family: "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-  }
-  
-  /* Container for content */
-  .content {
-    max-width: 600px;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Main title */
-  .title h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Subtitle */
-  .title h2 {
-    text-align: center;
-    color: #006EB6;
-    letter-spacing: 1px;
-    font-size: 1rem;
-    border-top: 1px solid #eee;
-    padding-top: 0.5rem;
-    margin-top: 0;
-  }
-  
-  /* Paragraphs */
-  main p {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  
-  /* List inside main content */
-  .does-list {
-    padding-left: 1.2rem;
-  }
-  
-  /* Footer logo styling */
-  footer {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .logo {
-    width: 150px;
-  }
-  
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+/* Container for content */
+.content {
+  max-width: 600px;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Main title */
+.title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.title h2 {
+  text-align: center;
+  color: #006EB6;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+  margin-top: 0;
+}
+
+/* Paragraphs */
+main p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* List inside main content */
+.does-list {
+  padding-left: 1.2rem;
+}
+
+/* Footer logo styling */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+/* Dark theme styles below ↓  */
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+body.dark .title h2 {
+  color: #7cc3f0; 
+}
