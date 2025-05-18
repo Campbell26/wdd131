@@ -7,6 +7,37 @@
   <meta name="author" content="Coleman F. Campbell">
   <title>Cool Pics 📷</title>
   <link rel="stylesheet" href="coolpics.css">
+  <!-- Inline style to hide the dialog by default -->
+  <style>
+    dialog#viewer:not([open]) {
+      display: none !important;
+    }
+  </style>
+  <!-- Inline script to close the modal immediately on page load -->
+  <script>
+    const modal = document.querySelector("#viewer");
+    const modalImg = document.querySelector("#viewer-img");
+    if (modal) {
+      modal.close();
+      modal.removeAttribute("open");
+      if (modalImg) {
+        modalImg.src = "";
+        modalImg.alt = "";
+      }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      if (modal) {
+        modal.close();
+        modal.removeAttribute("open");
+      }
+    });
+    window.addEventListener('load', () => {
+      if (modal) {
+        modal.close();
+        modal.removeAttribute("open");
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -39,7 +70,7 @@
   </main>
 
   <footer>
-    © 2025 Coleman F. Campbell
+    ©2023 Not a real site 😀.
   </footer>
 
   <dialog id="viewer">
