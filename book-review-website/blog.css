@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #473144;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+}
+
+a {
+  color: #AF1B3F;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #473144;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  border-top: 1px solid #EFC69B;
+  border-bottom: 1px solid #EFC69B;
+  padding: 10px 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  justify-content: end;
+  justify-items: end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  font-size: 1.2em;
+  color: #AF1B3F;
+}
+
+/* Main Grid Layout */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Articles Column */
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Article */
+article {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  border: 1px solid #EFC69B;
+  padding: 20px;
+}
+
+.article-details {
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.article-details .date {
+  font-weight: bold;
+  color: #AF1B3F;
+  margin-bottom: 10px;
+}
+
+.article-details .age,
+.article-details .genre,
+.article-details .rating {
+  margin: 5px 0;
+}
+
+.article-details .rating {
+  color: #EFC69B;
+}
+
+/* Article Content */
+.article-content h2 {
+  font-size: 1.5em;
+  color: #AF1B3F;
+  margin: 0 0 10px 0;
+}
+
+.article-content img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.article-content p {
+  color: #473144;
+  margin: 0;
+}
+
+/* Sidebar */
+.filters {
+  border: 1px solid #EFC69B;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Accessibility */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #AF1B3F;
+  color: white;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.skiptocontent a:focus {
+  top: 0;
+}
