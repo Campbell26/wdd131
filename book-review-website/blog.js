@@ -8,7 +8,7 @@ const articles = [
     imgAlt: "Cover of Septimus Heap Book One: Magyk by Angie Sage",
     ages: "10–14",
     genre: "Fantasy",
-    stars: "⭐⭐⭐⭐"
+    stars: "****"
   },
   {
     id: 2,
