@@ -10,6 +10,7 @@ body {
 
 h1, h2 {
   font-family: 'Lora', serif;
+  margin: 0;
 }
 
 a {
@@ -30,8 +31,22 @@ header {
 header h1 {
   font-size: 2.5em;
   color: #473144;
-  margin: 0;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Skip to Content Link */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #AF1B3F;
+  color: white;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.skiptocontent a:focus {
+  top: 0;
 }
 
 /* Navigation */
@@ -45,7 +60,7 @@ nav {
 
 .main-nav {
   display: grid;
-  grid-template-columns: 80px 80px 80px;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: end;
   justify-items: end;
   list-style: none;
@@ -54,7 +69,7 @@ nav {
 }
 
 .main-nav li {
-  margin: 0;
+  margin: 0 10px;
 }
 
 .main-nav a {
@@ -79,48 +94,55 @@ main {
   gap: 20px;
 }
 
-/* Individual Article */
+/* Individual Blog Entry */
 article {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 20px;
   border: 1px solid #EFC69B;
   padding: 20px;
 }
 
 .article-details {
-  text-align: left;
-  font-size: 0.9em;
+  text-align: right;
+  font-size: 1em;
+  line-height: 1.2;
+  border-right: 1px solid #EFC69B;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 
 .article-details .date {
   font-weight: bold;
   color: #AF1B3F;
-  margin-bottom: 10px;
+  font-size: 1.1em;
+  margin-bottom: 8px;
 }
 
 .article-details .age,
 .article-details .genre,
 .article-details .rating {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .article-details .rating {
   color: #EFC69B;
 }
 
-/* Article Content */
+/* Entry Content */
 .article-content h2 {
   font-size: 1.5em;
   color: #AF1B3F;
-  margin: 0 0 10px 0;
+  margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 .article-content img {
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
   height: auto;
-  margin-bottom: 10px;
   display: block;
+  margin: 0 auto 10px;
 }
 
 .article-content p {
@@ -133,19 +155,4 @@ article {
   border: 1px solid #EFC69B;
   padding: 20px;
   text-align: center;
-}
-
-/* Accessibility */
-.skiptocontent a {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #AF1B3F;
-  color: white;
-  padding: 10px;
-  z-index: 1000;
-}
-
-.skiptocontent a:focus {
-  top: 0;
 }
