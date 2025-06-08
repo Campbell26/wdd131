@@ -244,3 +244,10 @@ label {
   border-radius: 8px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.08);
 }
+
+.card-image {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 55px;
+}
