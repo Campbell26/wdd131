@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple, responsive recipe book for your favorite dishes.">
+  <meta name="author" content="Your Name">
+  <link rel="icon" href="images/recipe-book.png" type="image/png">
+  <link rel="stylesheet" href="recipes.css">
+  
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Recipe Book">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="A simple, responsive recipe book for your favorite dishes.">
+  <meta property="og:image" content="images/apple-crisp.jpg">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/recipes/">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo">
+      <span class="site-title">RecipeBook</span>
+    </div>
+  </header>
+
+  <main>
+    <form id="search-form" class="search-form" autocomplete="off">
+      <input type="text" id="search" placeholder="Find a recipe" aria-label="Find a recipe">
+      <button type="submit" aria-label="Search">
+        <img src="images/search.svg" alt="Search Icon">
+      </button>
+    </form>
+    
+    <section id="recipes-list" class="recipes-list">
+      <!-- Recipes will be rendered here by JS -->
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons" class="attribution">Recipe icons created by Freepik - Flaticon</a>
+    </small>
+    <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+    </div>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
