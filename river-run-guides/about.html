@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>About Us | River Run Guides</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Meet the expert guides at River Run Guides, dedicated to providing exceptional fly fishing experiences in Montana.">
+    <!-- load Alegreya from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header class="logoheader">
+        <img src="images/logo-riverun1.png" alt="River Run Guides Logo">
+        <h1>River Run Guides</h1>
+        <p class="slogan">Reel in the Adventure</p>
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trips.html">Guided Trips & Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+          
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div class="photoFullWidth">
+            <img src="images/homepage3.jpg" alt="Our expert guides on the river">
+            <p class="photo-caption">
+             Meet the expert guides at River Run Guides, dedicated to providing exceptional fly fishing experiences.
+             Our team brings decades of combined knowledge of Montana’s waterways, from hidden backcountry streams to iconic blue ribbon rivers.
+             We pride ourselves on personalized instruction, top‑notch safety standards, and a commitment to sustainable angling.
+             Join us and discover why River Run Guides is the premier choice for your next adventure.
+            </p>
+            <!-- moved inside to inherit text-align:center from .photoFullWidth -->
+            <h2 class="vacationshome">Meet Our Team</h2>
+        </div>
+
+        <section class="team-section">
+            <div class="card">
+                <img src="images/porterc.jpg" alt="Cole C." style="width:100%">
+                <h3>Cole C.</h3>
+                <p class="title">aka "Mr. Cool" - Lead Guide</p>
+                <p>I am the lead guide with 10+ years of experience.</p>
+                <div class="container">
+                    <ul>
+                        <li><strong>Safety Rating:</strong> Top Safety Rating (Certified Safety Expert)</li>
+                        <li><strong>Guiding Experience:</strong> 10 years of professional fly fishing guiding</li>
+                        <li><strong>Specialty:</strong> Expert in reading river currents</li>
+                        <li><strong>Passion:</strong> Mentoring new anglers with patience and skill</li>
+                    </ul>
+                </div>
+                <p><button onclick="showContact('Cole', 'cole@riverrunguides.com', '(555) 123-4567')" tabindex="0">Contact</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/sarahbrooks1.jpg" alt="Sarah Brooks" style="width:100%">
+                <h3>Sarah Brooks</h3>
+                <p class="title">aka "Fly Master" - Fly Fishing Expert</p>
+                <p>Expert in fly selection and casting techniques.</p>
+                <div class="container">
+                    <ul>
+                        <li><strong>Safety Rating:</strong> Top Safety Rating (Certified Safety Expert)</li>
+                        <li><strong>Guiding Experience:</strong> 6 years of professional fly fishing guiding</li>
+                        <li><strong>Skill:</strong> Master of advanced casting techniques</li>
+                        <li><strong>Hobby:</strong> Designs custom flies for unique fishing conditions</li>
+                    </ul>
+                </div>
+                <p><button onclick="showContact('Sarah', 'sarah@riverrunguides.com', '(555) 987-6543')" tabindex="0">Contact</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/team-5.jpg" alt="Porter Morrison" style="width:100%">
+                <h3>Porter Morrison</h3>
+                <p class="title">aka "Ice Man" - Wilderness Specialist</p>
+                <p>I am a specialist in multi-day wilderness adventures.</p>
+                <div class="container">
+                    <ul>
+                        <li><strong>Safety Rating:</strong> Top Safety Rating (Certified Safety Expert)</li>
+                        <li><strong>Guiding Experience:</strong> 8 years of professional fly fishing guiding</li>
+                        <li><strong>Expertise:</strong> Wilderness survival and navigation</li>
+                        <li><strong>Interest:</strong> Photography of remote fishing locations</li>
+                    </ul>
+                </div>
+                <p><button onclick="showContact('Porter', 'porter@riverrunguides.com', '(555) 456-7890')" tabindex="0">Contact</button></p>
+            </div>
+        </section>
+
+        <!-- Contact Modal (unchanged) -->
+        <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalHeading">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()" tabindex="0" onkeydown="if(event.key==='Enter') closeModal()">×</span>
+                <h2 id="contactModalHeading">River Run Guides Contact Info</h2>
+                <p id="contactInfo"></p>
+                <p>For more inquiries, visit our <a href="contactus.html">Contact Us</a> page.</p>
+            </div>
+        </div>
+
+        <script>
+            function showContact(name, email, phone) {
+                const modal = document.getElementById("contactModal");
+                const contactInfo = document.getElementById("contactInfo");
+                const closeButton = modal.querySelector(".close");
+
+                contactInfo.innerHTML = 
+                  `Guide: ${name}<br>` +
+                  `Guide Email: ${email}<br>` +
+                  `Guide Phone: ${phone}<br>` +
+                  `Owner Email: campbell@riverrunguides.com<br>` +
+                  `River Run Guides Phone: (555) 321-9876`;
+                modal.style.display = "block";
+
+                closeButton.focus();
+                modal.addEventListener('keydown', function trap(e) {
+                  if (e.key === 'Tab') { e.preventDefault(); closeButton.focus(); }
+                });
+            }
+
+            function closeModal() {
+                document.getElementById("contactModal").style.display = "none";
+            }
+
+            window.onclick = function(e) {
+              if (e.target == document.getElementById("contactModal")) {
+                closeModal();
+              }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>© 2024 River Run Guides. All rights reserved. | <a href="contactus.html">Contact Us</a> | <a href="site-plan.html">Site Plan</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>River Run Guides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Reel in the Adventure with River Run Guides, guided fly fishing on Montana's blue ribbon rivers.">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="logoheader">
+    <img src="images/logo-riverun1.png" alt="River Run Guides Logo">
+    <h1>River Run Guides</h1>
+    <p class="slogan">Reel in the Adventure</p>
+  </header>
+
+  <nav class="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trips.html">Guided Trips & Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Feature Photo & Caption -->
+    <div class="photoFullWidth">
+      <h2 class="vacationshome">Fly Fishing Montana's Blue Ribbon Rivers</h2>
+      <img src="images/homepage3.jpg" alt="Scenic Fly Fishing">
+      <p class="photo-caption">
+        At River Run Guides, we offer unparalleled guided fly fishing trips. Whether you're
+        a seasoned angler or just starting, our experienced guides will ensure an
+        unforgettable experience. Safety, sustainability, and adventure are our
+        top priorities.
+      </p>
+    </div>
+
+    <!-- Slideshow (moved below the feature photo) -->
+    <div class="slideshow">
+      <button class="prev" aria-label="Previous slide">❮</button>
+      <img id="slide-image"
+           src="images/madison-river.jpg"
+           alt="Scenic view of Madison River in Montana at sunset">
+      <button class="next" aria-label="Next slide">❯</button>
+    </div>
+
+    <!-- Blue Ribbon Rivers Info (also moved below the feature photo) -->
+    <section class="rivers-info">
+      <h2>Our Favorite Blue Ribbon Rivers</h2>
+      <article class="river">
+        <h3>Madison River</h3>
+        <p>
+          The world‑renowned Madison cuts through dramatic canyons and meadowlands,
+          offering rainbow and brown trout fishing almost year‑round. With our expert
+          guides you’ll learn to read its ever‑changing currents and hook the hard‑fighting trout
+          that made this river famous.
+        </p>
+      </article>
+      <article class="river">
+        <h3>Big Hole River</h3>
+        <p>
+          Flowing from the Continental Divide, the Big Hole is a true wade‑fisher’s dream.
+          Pristine headwaters, abundant hatches, and scenic backcountry access give anglers
+          of all levels a once‑in‑a‑lifetime Montana experience.
+        </p>
+      </article>
+    </section>
+
+    <!-- Quote Form -->
+    <form id="quoteForm" onsubmit="return showQuoteConfirmation(event)">
+      <fieldset>
+        <legend>Request A Quote</legend>
+        <table>
+          <tr>
+            <td><label>First Name: <input type="text" id="firstname" name="firstname" required></label></td>
+            <td><label>Last Name: <input type="text" name="lastname" required></label></td>
+          </tr>
+          <tr>
+            <td><label>Email: <input type="email" name="email" required></label></td>
+            <td><label>Phone: <input type="tel" name="phone" required></label></td>
+          </tr>
+          <tr>
+            <td><label>Address: <input type="text" name="address" required></label></td>
+            <td><label>Zip Code: <input type="text" name="zipcode" required></label></td>
+          </tr>
+          <tr>
+            <td><label>Group Size: <input type="number" name="groupsize" min="1" max="30" required></label></td>
+            <td><input type="submit" value="Request A Quote"></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+
+    <!-- Confirmation Modal -->
+    <div id="quoteConfirmationModal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close" onclick="closeQuoteConfirmationModal()" tabindex="0">×</span>
+        <h2>Quote Request Sent</h2>
+        <p id="quoteConfirmationMessage"></p>
+      </div>
+    </div>
+
+    <!-- Adventure Grid -->
+    <div class="adventuregrid">
+      <div>
+        <h2>Guided Fly Fishing Trips</h2>
+        <img src="images/trips1.jpg" alt="Guided Fly Fishing">
+        <p>Explore the best fly fishing spots with expert guides.</p>
+      </div>
+      <div>
+        <h2>Luxury Lodging</h2>
+        <img src="images/trips2.jpg" alt="Luxury Lodging">
+        <p>Stay in our premium riverside cabins after your adventure.</p>
+      </div>
+      <div>
+        <h2>Family & Group Packages</h2>
+        <img src="images/multi-day.jpg" alt="Family Group Fishing">
+        <p>Enjoy a tailored fishing experience for families and groups.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 River Run Guides. All rights reserved. | <a href="site-plan.html">Site Plan</a></p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function showQuoteConfirmation(event) {
+      event.preventDefault();
+      const form = document.getElementById("quoteForm");
+      const firstname = form.querySelector("#firstname").value;
+      const modal = document.getElementById("quoteConfirmationModal");
+      const message = document.getElementById("quoteConfirmationMessage");
+      message.textContent = `Hello, ${firstname}! We’re thrilled you requested a quote. Expect to hear from us soon for your next fly fishing adventure!`;
+      modal.style.display = "block";
+      form.reset();
+      return false;
+    }
+    function closeQuoteConfirmationModal() {
+      document.getElementById("quoteConfirmationModal").style.display = "none";
+    }
+    window.onclick = e => {
+      if (e.target.id === "quoteConfirmationModal") {
+        closeQuoteConfirmationModal();
+      }
+    };
+  </script>
+</body>
+</html>

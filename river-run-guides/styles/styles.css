@@ -1,0 +1,319 @@
+/* === GLOBAL === */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Alegreya', serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* === HEADER & NAV === */
+.logoheader {
+  background: #0D1F2D;
+  text-align: center;
+  padding: 20px;
+}
+.logoheader img {
+  max-width: 120px;
+}
+.logoheader h1 {
+  font-size: 36px;
+  color: #FF8000;
+  margin: 10px 0 5px;
+  text-shadow: 2px 2px rgba(0, 0, 0, .3);
+}
+.slogan {
+  font-style: italic;
+  color: #FF8000;
+}
+.navigation {
+  background: #0D1F2D;
+  border-bottom: 2px solid #FF8000;
+  padding: .5em 0;
+}
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: .5em 1em;
+  border-radius: 5px;
+  transition: background .3s;
+}
+.navigation a:hover {
+  background: #FF8000;
+}
+
+/* === SLIDESHOW === */
+.slideshow {
+  position: relative;
+  max-width: 800px;
+  margin: 2em auto;
+}
+.slideshow img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.slideshow button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, .4);
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: .2em .5em;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slideshow .prev {
+  left: 1%;
+}
+.slideshow .next {
+  right: 1%;
+}
+
+/* === BLUE RIBBON RIVERS === */
+.rivers-info {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 0 1em;
+}
+.rivers-info h2 {
+  text-align: center;
+  color: #0D1F2D;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.rivers-info .river {
+  background: #fff;
+  border-left: 4px solid #FF8000;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+}
+.rivers-info h3 {
+  margin-top: 0;
+  color: #0D1F2D;
+}
+.rivers-info p {
+  line-height: 1.6;
+}
+
+/* === PHOTO & ADVENTURES === */
+.photoFullWidth {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 2em 1em;
+}
+.vacationshome {
+  background: #FF8000;
+  color: #fff;
+  display: inline-block;
+  padding: 1em;
+  font-size: 2em;
+  border-radius: 5px;
+}
+.photo-caption {
+  margin-top: .5em;
+  color: #333;
+}
+
+/* === FORM === */
+form {
+  background: #fff;
+  padding: 1.5em;
+  margin: 2em auto;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+fieldset {
+  border: 2px solid #FF8000;
+  padding: 1em;
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: .5em;
+}
+input, select {
+  width: 100%;
+  padding: .5em;
+  margin: .5em 0;
+  font-family: inherit;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .4);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #0D1F2D;
+  color: #FF8000;
+  padding: 2em;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+.close {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* === ADVENTURE GRID === */
+.adventuregrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  max-width: 900px;
+  margin: 2em auto;
+}
+.adventuregrid div {
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  text-align: center;
+  transition: transform .3s;
+}
+.adventuregrid div:hover {
+  transform: scale(1.05);
+}
+.adventuregrid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* === TRIPS page === */
+.trip-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 1em;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.trip-options div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+.trip-options img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: .5em;
+}
+.trip-options h3 {
+  margin: .5em 0;
+  color: #0D1F2D;
+}
+.trip-options p {
+  margin: .5em 0;
+}
+.trip-options ul {
+  list-style: none;
+  padding: 0;
+  margin: .5em 0;
+}
+.trip-options li {
+  position: relative;
+  padding-left: 1.2em;
+  margin: .5em 0;
+}
+.trip-options li:before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: #FF8000;
+}
+
+/* === TEAM page === */
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 1em;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.card {
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.card .container ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.card li {
+  position: relative;
+  padding-left: 1.2em;
+  margin: .5em 0;
+}
+.card li:before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: #FF8000;
+}
+
+/* === FOOTER === */
+footer {
+  background: #0D1F2D;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+footer a {
+  color: #FF8000;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === MEDIA QUERIES === */
+@media(max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    gap: .5em;
+  }
+}
